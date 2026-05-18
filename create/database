@@ -1,0 +1,13 @@
+CREATE TABLE users ( 
+    user_id INT(11) AUTO_INCREMENT PRIMARY KEY, 
+    username VARCHAR(50) NOT NULL, 
+    password VARCHAR(225) NOT NULL, 
+    role ENUM('admin', 'user', '', '') DEFAULT 'user'
+); 
+
+CREATE TABLE alumni ( 
+    id_alumni INT(11) AUTO_INCREMENT PRIMARY KEY, 
+    nama VARCHAR(100) NOT NULL, 
+    angkatan YEAR(4) NOT NULL, 
+    jurusan VARCHAR(100) NOT NULL
+);
