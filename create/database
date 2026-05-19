@@ -1,13 +1,16 @@
+CREATE DATABASE alumni_db; 
+ 
 CREATE TABLE users ( 
-    user_id INT(11) AUTO_INCREMENT PRIMARY KEY, 
-    username VARCHAR(50) NOT NULL, 
-    password VARCHAR(225) NOT NULL, 
-    role ENUM('admin', 'user', '', '') DEFAULT 'user'
+user_id INT AUTO_INCREMENT PRIMARY KEY, 
+username VARCHAR(50), 
+password VARCHAR(255), 
+nama_lengkap VARCHAR(100), 
+role ENUM('admin','user') 
 ); 
-
+ 
 CREATE TABLE alumni ( 
-    id_alumni INT(11) AUTO_INCREMENT PRIMARY KEY, 
-    nama VARCHAR(100) NOT NULL, 
-    angkatan YEAR(4) NOT NULL, 
-    jurusan VARCHAR(100) NOT NULL
-);
+id_alumni INT AUTO_INCREMENT PRIMARY KEY, 
+nama VARCHAR(100), 
+angkatan YEAR, 
+jurusan VARCHAR(100) 
+); 
