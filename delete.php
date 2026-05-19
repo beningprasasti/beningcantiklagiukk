@@ -13,7 +13,7 @@ if (isset($_GET['id'])) {
     $id = $_GET['id'];
 
     
-    $sql = "DELETE FROM alumni WHERE id='$id'";
+    $sql = "DELETE FROM alumni WHERE id_alumni='$id'";
     if (mysqli_query($conn, $sql)) {
     header("Location: dashboard_admin.php");
         exit;
